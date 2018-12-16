@@ -16,11 +16,15 @@ const jestConfig = {
   moduleNameMapper: {
     '\\.(css|scss|less)$': '<rootDir>/config/jest/styleMock.js',
   },
-  reporters: ['default', 'jest-junit'],
+  reporters: [
+    'default',
+    ['jest-junit', {
+      outputDirectory: '<rootDir>/reports/junit'
+    }]
+  ],
   roots: ['<rootDir>/client/'],
   setupFiles: ['<rootDir>/config/jest/setup.js'],
   testEnvironment: 'node',
-  testResultsProcessor: 'jest-junit',
   transform: {
     '^.+\\.jsx?$': '<rootDir>/config/jest/jest.transformer.js',
   },
