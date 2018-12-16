@@ -1,0 +1,32 @@
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button, .button {
+  margin-bottom: 1rem;
+}
+
+input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 2.5rem;
+}
+
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
