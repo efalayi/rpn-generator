@@ -18,5 +18,12 @@ jobs:
           key: 'dependency-cache-{{ checksum "yarn.lock" }}'
           paths:
             - ./node_modules
-      - run: yarn test
-      - run: yarn run coverage
+      - run:
+          name: "Run Client Test"
+          environment:
+            JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
+          command: yarn test -- --ci
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit

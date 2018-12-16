@@ -20,6 +20,7 @@ const jestConfig = {
   roots: ['<rootDir>/client/'],
   setupFiles: ['<rootDir>/config/jest/setup.js'],
   testEnvironment: 'node',
+  testResultsProcessor: 'jest-junit',
   transform: {
     '^.+\\.jsx?$': '<rootDir>/config/jest/jest.transformer.js',
   },

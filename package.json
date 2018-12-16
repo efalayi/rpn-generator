@@ -12,7 +12,6 @@
     "build:config": "babel --root-mode upward config -d dist/config",
     "build:server": "babel --root-mode upward server -d dist/server",
     "build:dev:server": "babel-node server/server.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "./node_modules/.bin/eslint './**/*.js'",
     "prebuild": "rimraf dist && mkdir dist",
     "prestart": "npm run build",
@@ -22,7 +21,7 @@
     "start:dev": "npm-run-all --parallel start:api:dev start:react:dev",
     "start:react:dev": "webpack-dev-server --config webpack.dev.config.babel.js --watch",
     "test": "npm run test:client -u",
-    "test:client": "jest --config jest.config.js --coverage"
+    "test:client": "jest --config jest.config.js --coverage | coveralls"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
