@@ -21,7 +21,7 @@
     "start:api:dev": "nodemon",
     "start:dev": "npm-run-all --parallel start:api:dev start:react:dev",
     "start:react:dev": "webpack-dev-server --config webpack.dev.config.babel.js --watch",
-    "test": "npm run test:client --updateSnapshot",
+    "test": "npm run test:client",
     "test:client": "jest --config jest.config.js --coverage"
   },
   "dependencies": {
