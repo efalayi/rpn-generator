@@ -12,7 +12,9 @@
     "build:config": "babel --root-mode upward config -d dist/config",
     "build:server": "babel --root-mode upward server -d dist/server",
     "build:dev:server": "babel-node server/server.js",
-    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "npm-run-all client:coverage server:coverage",
+    "client:coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "server:coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "./node_modules/.bin/eslint './**/*.js'",
     "prebuild": "rimraf dist && mkdir dist",
     "prestart": "npm run build",
@@ -21,14 +23,16 @@
     "start:api:dev": "nodemon",
     "start:dev": "npm-run-all --parallel start:api:dev start:react:dev",
     "start:react:dev": "webpack-dev-server --config webpack.dev.config.babel.js --watch",
-    "test": "npm run test:client",
-    "test:client": "jest --ci --config jest.config.js --coverage"
+    "test": "npm-run-all test:client test:server",
+    "test:client": "jest --ci --config jest.config.js --coverage",
+    "test:server": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --opts ./mocha.opts"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "write-json-file": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
@@ -59,6 +63,9 @@
     "jest-junit": "^5.2.0",
     "jsdom": "^13.1.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0",
+    "mock-fs": "^4.7.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.8",
     "npm-run-all": "^4.1.5",
