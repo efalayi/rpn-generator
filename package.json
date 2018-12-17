@@ -14,7 +14,7 @@
     "build:dev:server": "babel-node server/server.js",
     "coverage": "npm-run-all client:coverage server:coverage",
     "client:coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "server:coverage": "nyc report --reporter=text-lcov | coveralls",
+    "server:coverage": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "./node_modules/.bin/eslint './**/*.js'",
     "prebuild": "rimraf dist && mkdir dist",
     "prestart": "npm run build",
