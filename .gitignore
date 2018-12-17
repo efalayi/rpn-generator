@@ -21,7 +21,7 @@ coverage
 .nyc_output
 
 # reporter files
-junit.xml
+reports
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -64,3 +64,4 @@ typings/
 .next
 
 dist
+server/data

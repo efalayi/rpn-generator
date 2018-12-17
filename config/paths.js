@@ -8,6 +8,7 @@ const resolvePath = relativePath => path.resolve(APP_DIRECTORY, relativePath)
 const APP_PATHS = {
   appBuild: resolvePath('dist'),
   appClient: resolvePath('client'),
+  appData: './server/data',
   appHtml: resolvePath('client/index.html'),
   appServer: resolvePath('server'),
   appStatic: resolvePath('dist/static')
