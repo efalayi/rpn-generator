@@ -5,14 +5,11 @@ class Factory {
   constructor(props) {
     this.name = props.name || 'Factory'
     this.type = props.type || 'name'
-    this.build = this.build.bind(this)
   }
 
-  getFactoryName() {
-    return this.name
-  }
+  getFactoryName = () => this.name
 
-  build(...args) {
+  build = (...args) => {
     const { type } = this
     if (!type || !factoryTypes[type]) {
       throw new TypeError('Factory type does not exist')
@@ -20,7 +17,7 @@ class Factory {
     return factoryTypes[type](args)
   }
 
-  async buildList(maximum, filePath, shouldSaveToFile) {
+  buildList = async (maximum, filePath, shouldSaveToFile) => {
     const list = []
     for (let index = 0; index < maximum; index += 1) {
       list.push(this.build(maximum))
