@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import dotenv from 'dotenv'
 import HtmlWepackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import webpack from 'webpack'
 import optimize from './config/webpack/optimize'
 import DEV_TOOLS from './config/webpack/devtools'
 import appPaths from './config/paths'
@@ -10,6 +11,7 @@ import appPaths from './config/paths'
 dotenv.config()
 
 const PORT = process.env.REACT_APP_PORT || 3000
+const { API_URL } = process.env
 const environment = 'development'
 const devtool = DEV_TOOLS[environment]
 
@@ -31,7 +33,10 @@ export default {
   optimization: optimize(environment, 'server'),
   devServer: {
     contentBase: './dist',
-    port: PORT
+    port: PORT,
+    proxy: {
+      '/api': API_URL
+    }
   },
   module: {
     rules: [
@@ -91,6 +96,9 @@ export default {
     ],
   },
   plugins: [
+    new webpack.EnvironmentPlugin([
+      'NODE_ENV', 'API_URL'
+    ]),
     new HtmlWepackPlugin({
       template: appPaths.appHtml,
       minify: {
