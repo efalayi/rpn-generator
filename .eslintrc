@@ -7,6 +7,10 @@
     "node": true
   },
   "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "plugins": [
     "react",
     "jsx-a11y",
@@ -46,6 +50,7 @@
         ]
       }
     ],
+    "react/button-has-type": "off",
     "semi": ["error", "never"]
   }
 }

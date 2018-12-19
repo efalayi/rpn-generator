@@ -1,0 +1,9 @@
+.control-panel {
+  margin: 1rem 0rem;
+  button, .button {
+    margin-right: 0.8rem;
+    &:last-child{
+      margin-right: 0rem;
+    }
+  }
+}

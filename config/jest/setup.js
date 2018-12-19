@@ -6,23 +6,10 @@ Enzyme.configure({ adapter: new Adapter() })
 
 const documentHTML = '<!doctype html><html><body><div id="app"></div></body></html>'
 const { window } = new JSDOM(documentHTML)
+
+global.fetch = jest.fn()
 global.window = window
 global.document = window.document
-global.navigator = window.navigator
-
-// const localStorageMock = (() => {
-//   let store = {}
-//   return {
-//     getItem: key => store[key] || null,
-//     setItem: (key, value) => {
-//       store[key] = value.toString()
-//     },
-//     clear: () => {
-//       store = {}
-//     }
-//   }
-// })()
-
-// Object.defineProperty(window, 'localStorage', {
-//   value: localStorageMock
-// })
+global.navigator = {
+  userAgent: 'node.js',
+}

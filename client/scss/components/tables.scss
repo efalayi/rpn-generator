@@ -1,14 +1,24 @@
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  width: 100%;
+}
+thead, tbody {
+  padding: 1rem;
+}
 
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
+tr {
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #E1E1E1;
+  }
 }
 
 th:first-child, td:first-child {
   padding-left: 0;
+  width: 5rem;
+  text-align: center;
 }
 
 th:last-child, td:last-child {

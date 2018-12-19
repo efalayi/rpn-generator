@@ -1,0 +1,22 @@
+.result-panel.container {
+  padding: 1rem 0rem;
+  .column {
+    span {
+      font-size: 1.5rem;
+      letter-spacing: .1rem;
+      &:first-child {
+        font-weight: 600;
+        margin-right: 0.8rem;
+        vertical-align: middle;
+        &::after {
+          content: ":";
+          margin-left: 0.2rem;
+        }
+      }
+      &:nth-child(2) {
+        color: cornflowerblue;
+        font-weight: 500;
+      }
+    }
+  }
+}

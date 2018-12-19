@@ -14,6 +14,9 @@ const babelConfig = {
       },
     ],
   ],
+  plugins: [
+    '@babel/plugin-proposal-class-properties'
+  ],
   ignore: [
     'node_modules',
   ]
