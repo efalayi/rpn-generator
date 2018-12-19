@@ -19,7 +19,7 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: "Run Client Test"
+          name: "Run Tests"
           environment:
             JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
           command: yarn test

@@ -10,4 +10,11 @@ router.get('/api/v1/contacts/phone-numbers', async (req, res) => {
   })
 })
 
+router.get('/api/v1/contacts/generate', async (req, res) => {
+  const newPhoneNumbers = await ContactRepository.generateNewPhoneNumbers()
+  res.json({
+    newPhoneNumbers
+  })
+})
+
 export default router
