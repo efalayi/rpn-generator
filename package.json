@@ -16,7 +16,7 @@
     "client:coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "server:coverage": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "./node_modules/.bin/eslint './**/*.js'",
-    "prebuild": "rimraf dist && mkdir dist",
+    "prebuild": "./node_modules/.bin/rimraf dist && mkdir dist",
     "prestart": "yarn run build",
     "start": "yarn run start:api",
     "start:api": "node dist/server/server.js",
