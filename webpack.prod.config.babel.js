@@ -1,3 +1,4 @@
+import dotenv from 'dotenv'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWepackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
@@ -5,8 +6,7 @@ import optimize from './config/webpack/optimize'
 import DEV_TOOLS from './config/webpack/devtools'
 import appPaths from './config/paths'
 
-process.env.NODE_ENV = 'production'
-process.env.API_URL = 'http://localhost:5000'
+dotenv.config()
 
 const environment = 'production'
 const devtool = DEV_TOOLS[environment]
