@@ -17,14 +17,14 @@
     "server:coverage": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "./node_modules/.bin/eslint './**/*.js'",
     "prebuild": "rimraf dist && mkdir dist",
-    "prestart": "npm run build",
-    "start": "npm run start:api",
+    "prestart": "yarn run build",
+    "start": "yarn run start:api",
     "start:api": "node dist/server/server.js",
     "start:api:dev": "nodemon",
     "start:dev": "npm-run-all --parallel start:api:dev start:react:dev",
     "start:react:dev": "webpack-dev-server --config webpack.dev.config.babel.js --watch",
     "test": "npm-run-all test:client test:server",
-    "test:client": "jest --ci --config jest.config.js --coverage",
+    "test:client": "./node_modules/.bin/jest --ci --config jest.config.js --coverage",
     "test:server": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --opts ./mocha.opts"
   },
   "dependencies": {
