@@ -107,5 +107,20 @@ describe('#Root', () => {
       const componentState = componentWrapper.getInstance().state
       expect(componentState.phoneNumbers).toEqual(phoneNumbersInDescendingOrder)
     })
+
+    it('should generate new phoneNumbers when Generate New Numbers button is clicked', () => {
+      api.generateNewPhoneNumbers = jest.fn(() => ({
+        newPhoneNumbers: ['012345678932', '04562378194']
+      }))
+      const generateNewPhoneNumbersSpy = jest.spyOn(api, 'generateNewPhoneNumbers')
+      const componentRoot = componentWrapper.root
+      const generateNewNumbersButton = componentRoot.findByProps({
+        className: 'solid generate-new-numbers'
+      })
+      generateNewNumbersButton.props.onClick()
+      expect(generateNewPhoneNumbersSpy).toHaveBeenCalled()
+      expect(generateNewPhoneNumbersSpy).toHaveBeenCalledTimes(1)
+      generateNewPhoneNumbersSpy.mockRestore()
+    })
   })
 })

@@ -11,16 +11,16 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
   <div
     className="app-bar"
   >
-    <h5>
-      Total Phone Numbers: 0
-    </h5>
     <button
-      className="solid"
+      className="solid generate-new-numbers"
       onClick={[Function]}
       type="button"
     >
       Generate New Numbers
     </button>
+    <h6>
+      Total Phone Numbers: 0
+    </h6>
   </div>
   <div
     className="control-panel"

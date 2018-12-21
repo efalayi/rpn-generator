@@ -15,5 +15,5 @@
     "NODE_ENV": "development"
   },
   "ext": "js",
-  "exec": "npm-run-all prebuild build:dev:server"
+  "exec": "npm-run-all build build:dev:server"
 }
