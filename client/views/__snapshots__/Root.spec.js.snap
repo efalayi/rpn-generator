@@ -5,36 +5,49 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
   className="container flex-container flex-column flex-center"
   id="root"
 >
-  <h2>
+  <h3>
     Random Phone Number Generator
-  </h2>
-  <div>
+  </h3>
+  <div
+    className="app-bar"
+  >
     <h5>
-      Total Count: 0
+      Total Phone Numbers: 0
     </h5>
+    <button
+      className="solid"
+      onClick={[Function]}
+      type="button"
+    >
+      Generate New Numbers
+    </button>
   </div>
   <div
     className="control-panel"
   >
     <button
+      className=""
       onClick={[Function]}
       type="button"
     >
       Sort Ascending
     </button>
     <button
+      className=""
       onClick={[Function]}
       type="button"
     >
       Sort Descending
     </button>
     <button
+      className=""
       onClick={[Function]}
       type="button"
     >
       Find Max
     </button>
     <button
+      className=""
       onClick={[Function]}
       type="button"
     >

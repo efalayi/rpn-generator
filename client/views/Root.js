@@ -24,6 +24,15 @@ class Root extends Component {
     }))
   }
 
+  generateNewPhoneNumbers = async () => {
+    const { newPhoneNumbers } = await api.generateNewPhoneNumbers()
+    this.setState(() => ({
+      phoneNumbers: newPhoneNumbers,
+      minNumber: '',
+      maxNumber: ''
+    }))
+  }
+
   handleAscSort = () => {
     const { phoneNumbers } = this.state
     const sortedPhoneNumbers = NumberHelper.sortPhoneNumbers(phoneNumbers, 'asc')
@@ -58,7 +67,7 @@ class Root extends Component {
 
   render() {
     const { maxNumber, minNumber, phoneNumbers } = this.state
-    const totalCount = NumberHelper.getPhoneNumbersCount(phoneNumbers)
+    const totalPhoneNumbers = NumberHelper.getPhoneNumbersCount(phoneNumbers)
     const actions = [
       {
         name: 'Sort Ascending',
@@ -92,9 +101,10 @@ class Root extends Component {
         phoneNumbers={phoneNumbers}
         maxNumber={maxNumber}
         minNumber={minNumber}
-        totalCount={totalCount}
+        totalPhoneNumbers={totalPhoneNumbers}
         controlPanelActions={actions}
         resultPanelValues={results}
+        generatePhoneNumbers={this.generateNewPhoneNumbers}
       />
     )
   }

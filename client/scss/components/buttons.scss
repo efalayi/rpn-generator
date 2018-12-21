@@ -4,7 +4,7 @@
 .button, button {
   display: inline-block;
   height: 38px;
-  padding: 0 30px;
+  padding: 0 15px;
   color: #555;
   text-align: center;
   font-size: 11px;
@@ -16,7 +16,7 @@
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 0.15rem solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -44,8 +44,8 @@ input {
 }
 
 .button:hover, button:hover {
-  color: #333;
-  border-color: #888;
+  color: cornflowerblue;
+  border-color: cornflowerblue;
   outline: 0;
 }
 
@@ -114,11 +114,22 @@ input {
   &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"] {
     height: 38px;
     padding: 6px 10px;
-    /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: #fff;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
+  }
+}
+
+button.solid, .button.solid {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+  color: #222;
+  &:hover {
+    color: #000;
+    font-weight: 600;
+    border-color: cornflowerblue;
+    outline: 0;
   }
 }

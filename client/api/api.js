@@ -21,6 +21,18 @@ const getPhoneNumbers = async () => {
   }
 }
 
+const generateNewPhoneNumbers = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/contacts/generate`, {
+      credentials: 'same-origin',
+    })
+    return handleResponse(response)
+  } catch (error) {
+    return handleError(error)
+  }
+}
+
 export default {
+  generateNewPhoneNumbers,
   getPhoneNumbers
 }
