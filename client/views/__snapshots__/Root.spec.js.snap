@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Root with defined phone numbers should render without crashing 1`] = `
+<div
+  className="container flex-container flex-column flex-center"
+  id="root"
+>
+  <h3>
+    Random Phone Number Generator
+  </h3>
+  <div
+    className="app-bar"
+  >
+    <h5>
+      Total Phone Numbers: 0
+    </h5>
+    <button
+      className="solid"
+      onClick={[Function]}
+      type="button"
+    >
+      Generate New Numbers
+    </button>
+  </div>
+  <div
+    className="control-panel"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Sort Ascending
+    </button>
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Sort Descending
+    </button>
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Find Max
+    </button>
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Find Min
+    </button>
+  </div>
+  <div
+    className="result-panel container"
+  >
+    <div
+      className="one-half column"
+    >
+      <div
+        className="flex-container flex-center"
+      >
+        <span>
+          Maximum Number
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+    <div
+      className="one-half column"
+    >
+      <div
+        className="flex-container flex-center"
+      >
+        <span>
+          Minimum Number
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Phone Number
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
