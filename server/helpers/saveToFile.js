@@ -8,7 +8,7 @@ const convertToJSONData = (dataName, payload) => {
   return JSON.stringify(jsonData, null, 2)
 }
 
-const saveToDirectory = async (filePath, dataName, dataValue) => {
+const saveToFile = async (filePath, dataName, dataValue) => {
   const jsonData = convertToJSONData(dataName, dataValue)
   await fs.writeFile(filePath, jsonData, (error) => {
     if (error) {
@@ -19,4 +19,4 @@ const saveToDirectory = async (filePath, dataName, dataValue) => {
   })
 }
 
-export default saveToDirectory
+export default saveToFile

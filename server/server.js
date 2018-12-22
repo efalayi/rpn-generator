@@ -10,8 +10,8 @@ import appPaths from '../config/paths'
 dotenv.config()
 
 const environment = process.env.NODE_ENV
-const { ALLOWED_ORIGINS, API_PORT } = process.env
-const PORT = API_PORT || 5000
+const API_PORT = process.env.PORT || 5000
+const allowedOrigins = process.env.ALLOWED_ORIGINS
 
 const contactsFilePath = `${appPaths.appData}/contacts.json`
 PhoneNumberFactory.buildList(10, contactsFilePath, true)
@@ -22,14 +22,14 @@ const printStartMessage = () => {
     modeColorPrint = 'green'
   }
   console.log(chalk[modeColorPrint](`Started RPNG API in ${environment} mode`))
-  console.log(chalk.green(`RPNG API is running on port: ${PORT}`))
+  console.log(chalk.green(`RPNG API is running on port: ${API_PORT}`))
 }
 
 const app = express()
 
 const corsOptions = {
   origin(origin, callback) {
-    if (!origin || ALLOWED_ORIGINS.indexOf(origin) !== -1) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
       callback(new Error('Not allowed by CORS'))
@@ -41,7 +41,7 @@ app.use(cors(corsOptions))
 app.use('/static', express.static(`${appPaths.appBuild}/client/static`))
 app.use(appRouter)
 
-app.listen(PORT, (error) => {
+app.listen(API_PORT, (error) => {
   if (error) {
     console.log(chalk.red(error))
   } else {

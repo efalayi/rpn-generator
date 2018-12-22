@@ -5,14 +5,14 @@ const router = new Router()
 
 router.get('/api/v1/contacts/phone-numbers', async (req, res) => {
   const phoneNumbers = await ContactRepository.getPhoneNumbers()
-  res.json({
+  res.status(200).send({
     phoneNumbers
   })
 })
 
-router.get('/api/v1/contacts/generate', async (req, res) => {
+router.post('/api/v1/contacts/generate', async (req, res) => {
   const newPhoneNumbers = await ContactRepository.generateNewPhoneNumbers()
-  res.json({
+  res.res.status(200).send({
     newPhoneNumbers
   })
 })

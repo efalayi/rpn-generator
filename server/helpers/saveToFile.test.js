@@ -2,10 +2,10 @@
 import { expect } from 'chai'
 import fsMock from 'mock-fs'
 import sinon from 'sinon'
-import saveToDirectory from './saveToFile'
+import saveToFile from './saveToFile'
 import logger from './logger'
 
-describe('#saveToDirectory', () => {
+describe('#saveToFile', () => {
   it('should log error message if an error occured while saving data to file', async () => {
     const filePath = './server/data/test.json'
     const dataTobeSaved = []
@@ -15,7 +15,7 @@ describe('#saveToDirectory', () => {
       }
     })
     const logSpy = sinon.spy(logger, 'error')
-    await saveToDirectory(filePath, 'dataName', dataTobeSaved)
+    await saveToFile(filePath, 'dataName', dataTobeSaved)
     expect(logSpy.called).to.be.true
     fsMock.restore()
     logSpy.restore()
@@ -31,7 +31,7 @@ describe('#saveToDirectory', () => {
       })
     })
     const logSpy = sinon.spy(logger, 'success')
-    await saveToDirectory(filePath, 'dataName', dataTobeSaved)
+    await saveToFile(filePath, 'dataName', dataTobeSaved)
     expect(logSpy.called).to.be.true
     expect(logSpy.calledWith('dataName was succesfully saved to ./server/data/test.json')).to.be.true
     fsMock.restore()
