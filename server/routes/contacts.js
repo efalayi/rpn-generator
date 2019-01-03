@@ -12,7 +12,7 @@ router.get('/api/v1/contacts/phone-numbers', async (req, res) => {
 
 router.post('/api/v1/contacts/generate', async (req, res) => {
   const newPhoneNumbers = await ContactRepository.generateNewPhoneNumbers()
-  res.res.status(200).send({
+  res.status(200).send({
     newPhoneNumbers
   })
 })
