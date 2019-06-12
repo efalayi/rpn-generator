@@ -9,7 +9,7 @@ const ActionResults = (props) => {
       {
         results.map(result => (
           <div className="one-half column" key={result.name}>
-            <div className="flex-container flex-center">
+            <div className="flex flex-center">
               <span>{result.name}</span>
               <span>{result.value}</span>
             </div>

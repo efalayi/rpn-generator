@@ -1,7 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Table from '../components/table.jsx'
+import NumberGrid from '../components/numberGrid.jsx'
 import ControlPanel from '../components/controlPanel.jsx'
 import ResultPanel from '../components/resultPanel.jsx'
 import AppBar from '../components/appBar.jsx'
@@ -14,7 +14,7 @@ class App extends Component {
       generatePhoneNumbers
     } = this.props
     return (
-      <div id="root" className="container flex-container flex-column flex-center">
+      <div className="container flex flex-column flex-center">
         <h3>Random Phone Number Generator</h3>
         <AppBar
           totalPhoneNumbers={totalPhoneNumbers}
@@ -22,7 +22,7 @@ class App extends Component {
         />
         <ControlPanel actions={controlPanelActions} />
         <ResultPanel results={resultPanelValues} />
-        <Table
+        <NumberGrid
           tableData={phoneNumbers}
           tableHeaderColumns={['#', 'Phone Number']}
         />
