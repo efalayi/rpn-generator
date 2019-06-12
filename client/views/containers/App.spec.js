@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import App from './App'
-import ControlPanel from '../components/controlPanel'
-import ResultPanel from '../components/resultPanel'
-import NumberGrid from '../components/numberGrid'
+import ControlPanel from '../components/control-panel/control-panel.jsx'
+import ResultPanel from '../components/result-panel/result-panel.jsx'
+import NumberGrid from '../components/number-grid/number-grid.jsx'
 
 const props = {
   totalPhoneNumbers: 3,

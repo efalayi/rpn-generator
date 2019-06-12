@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../scss/components/number-grid.scss'
+import '../../../scss/components/number-grid.scss'
 
 const COLORS = ['purple', 'purple-dark', 'yellow', 'orange', 'pink']
 

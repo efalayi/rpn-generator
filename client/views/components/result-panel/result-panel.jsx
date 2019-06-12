@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../../scss/components/result-panel.scss'
+import '../../../scss/components/result-panel.scss'
 
 const ActionResults = (props) => {
   const { results } = props

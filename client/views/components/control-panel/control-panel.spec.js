@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ControlPanel from './controlPanel'
+import ControlPanel from './control-panel.jsx'
 
 describe('#ControlPanel Component', () => {
   it('should render without props', () => {

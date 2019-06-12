@@ -1,10 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import NumberGrid from '../components/numberGrid.jsx'
-import ControlPanel from '../components/controlPanel.jsx'
-import ResultPanel from '../components/resultPanel.jsx'
-import AppBar from '../components/appBar.jsx'
+import NumberGrid from '../components/number-grid/number-grid.jsx'
+import ControlPanel from '../components/control-panel/control-panel.jsx'
+import ResultPanel from '../components/result-panel/result-panel.jsx'
+import AppBar from '../components/app-bar/app-bar.jsx'
 
 class App extends Component {
   render() {

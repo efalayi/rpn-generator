@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Table from './table'
+import Table from './table.jsx'
 
 describe('#Table Component', () => {
   describe('without props', () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../scss/components/tables.scss'
+import '../../../scss/components/tables.scss'
 
 const Table = (props) => {
   const { tableData, tableHeaderColumns } = props

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ActionResults from './resultPanel.jsx'
+import ActionResults from './result-panel.jsx'
 
 describe('#ActionResults Component', () => {
   it('should render with no props', () => {

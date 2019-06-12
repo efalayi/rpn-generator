@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './button.jsx'
-import '../../scss/components/app-bar.scss'
+import Button from '../button/button.jsx'
+import '../../../scss/components/app-bar.scss'
 
 const AppBar = (props) => {
   const { generatePhoneNumbers, totalPhoneNumbers } = props
