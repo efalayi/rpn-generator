@@ -16,22 +16,20 @@ const getBackgroundColor = (numberIndex) => {
 const NumberGrid = (props) => {
   const { tableData } = props
   return (
-    <div className="number-grid">
-      <div className="grid grid-item numbers">
-        {
-          tableData.map((value, index) => {
-            const backgroundColorClassName = getBackgroundColor(index)
-            return (
-              <div
-                key={value}
-                className={`grid-item ${backgroundColorClassName}`}
-              >
-                {value}
-              </div>
-            )
-          })
-        }
-      </div>
+    <div className="grid grid-item number-grid">
+      {
+        tableData.map((value, index) => {
+          const backgroundColorClassName = getBackgroundColor(index)
+          return (
+            <div
+              key={value}
+              className={`grid-item ${backgroundColorClassName}`}
+            >
+              {value}
+            </div>
+          )
+        })
+      }
     </div>
   )
 }

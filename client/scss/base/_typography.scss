@@ -1,3 +1,5 @@
+@import "./variables";
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -13,7 +15,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
-  color: #222;
+  color: $purple-dark;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -159,4 +161,25 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1;
+}
+
+// TEXT COLORS
+.text-purple {
+  color: $purple;
+}
+
+.text-purple-dark {
+  color: $purple-dark;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-pink {
+  color: $pink;
 }

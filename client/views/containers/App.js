@@ -15,7 +15,7 @@ class App extends Component {
     } = this.props
     return (
       <div className="container flex flex-column flex-center">
-        <h3>Random Phone Number Generator</h3>
+        <h3 className="text-purple-dark">Random Phone Number Generator</h3>
         <AppBar
           totalPhoneNumbers={totalPhoneNumbers}
           generatePhoneNumbers={generatePhoneNumbers}

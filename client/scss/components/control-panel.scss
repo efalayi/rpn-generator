@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 .control-panel {
   width: 100%;
   display: flex;
@@ -6,6 +8,13 @@
   margin: 1rem 0rem;
   button, .button {
     margin-right: 0.8rem;
+    border-color: $purple-dark;
+    color: $purple-dark;
+
+    &:hover {
+      border-color: $purple;
+      color: $purple;
+    }
     &:last-child{
       margin-right: 0rem;
     }

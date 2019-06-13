@@ -126,6 +126,10 @@ button.solid, .button.solid {
   background-color: cornflowerblue;
   border-color: cornflowerblue;
   color: #222;
+
+  i {
+    margin: 0;
+  }
   &:hover {
     color: #000;
     font-weight: 600;

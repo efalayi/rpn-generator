@@ -7,7 +7,13 @@ const AppBar = (props) => {
   const { generatePhoneNumbers, totalPhoneNumbers } = props
   return (
     <div className="app-bar">
-      <Button buttonClassName="solid generate-new-numbers" name="Generate New Numbers" type="button" handleClick={generatePhoneNumbers} />
+      <Button
+        buttonClassName="solid generate-new-numbers"
+        name="Generate New Numbers"
+        type="button"
+        handleClick={generatePhoneNumbers}
+        // iconName="face"
+      />
       <h6>{`Total Phone Numbers: ${totalPhoneNumbers}`}</h6>
     </div>
   )
