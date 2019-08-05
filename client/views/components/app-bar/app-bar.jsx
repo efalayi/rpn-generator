@@ -6,7 +6,7 @@ import '../../../scss/components/app-bar.scss'
 const AppBar = (props) => {
   const { generatePhoneNumbers, totalPhoneNumbers } = props
   return (
-    <div className="app-bar">
+    <div className="container app-bar">
       <Button
         buttonClassName="solid generate-new-numbers"
         name="Generate New Numbers"

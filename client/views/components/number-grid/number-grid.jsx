@@ -25,7 +25,7 @@ const NumberGrid = (props) => {
               key={value}
               className={`grid-item ${backgroundColorClassName}`}
             >
-              {value}
+              <span>{value}</span>
             </div>
           )
         })
