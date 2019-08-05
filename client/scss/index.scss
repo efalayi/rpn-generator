@@ -6,8 +6,11 @@
 @import "normalize";
 @import "base/typography";
 @import "base/grid";
+@import "base/variables";
 @import "utilities";
 
 #root {
   height: 100vh;
+  // background: rgba(0, 0, 0, 0.9);
+  background: whitesmoke;
 }

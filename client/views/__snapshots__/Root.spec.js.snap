@@ -2,14 +2,15 @@
 
 exports[`#Root with defined phone numbers should render without crashing 1`] = `
 <div
-  className="container flex-container flex-column flex-center"
-  id="root"
+  className="container flex flex-column flex-center"
 >
-  <h3>
+  <h3
+    className="text-purple-dark"
+  >
     Random Phone Number Generator
   </h3>
   <div
-    className="app-bar"
+    className="container app-bar"
   >
     <button
       className="solid generate-new-numbers"
@@ -23,7 +24,7 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
     </h6>
   </div>
   <div
-    className="control-panel"
+    className="container control-panel"
   >
     <button
       className=""
@@ -61,7 +62,7 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
       className="one-half column"
     >
       <div
-        className="flex-container flex-center"
+        className="flex flex-center"
       >
         <span>
           Maximum Number
@@ -75,7 +76,7 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
       className="one-half column"
     >
       <div
-        className="flex-container flex-center"
+        className="flex flex-center"
       >
         <span>
           Minimum Number
@@ -86,18 +87,8 @@ exports[`#Root with defined phone numbers should render without crashing 1`] = `
       </div>
     </div>
   </div>
-  <table>
-    <thead>
-      <tr>
-        <th>
-          #
-        </th>
-        <th>
-          Phone Number
-        </th>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+  <div
+    className="grid grid-item number-grid"
+  />
 </div>
 `;

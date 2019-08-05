@@ -1,12 +1,12 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import App from './App'
-import ControlPanel from '../components/controlPanel'
-import ResultPanel from '../components/resultPanel'
-import Table from '../components/table'
+import ControlPanel from '../components/control-panel/control-panel.jsx'
+import ResultPanel from '../components/result-panel/result-panel.jsx'
+import NumberGrid from '../components/number-grid/number-grid.jsx'
 
 const props = {
-  totalCount: 3,
+  totalPhoneNumbers: 3,
   phoneNumbers: ['0867647905', '0654421897', '0436789564'],
   controlPanelActions: [
     {
@@ -38,15 +38,15 @@ const props = {
   ]
 }
 describe('#App', () => {
-  describe('with props', () => {
+  describe('without props', () => {
     const appContainerWithoutProps = shallow(<App />)
     expect(appContainerWithoutProps.prop('phoneNumbers')).toBeUndefined()
-    expect(appContainerWithoutProps.prop('totalCount')).toBeUndefined()
+    expect(appContainerWithoutProps.prop('totalPhoneNumbers')).toBeUndefined()
     expect(appContainerWithoutProps.prop('controlPanelActions')).toBeUndefined()
     expect(appContainerWithoutProps.prop('resultPanelValues')).toBeUndefined()
   })
 
-  describe('with props', () => {
+  describe.only('with props', () => {
     const appContainerWithProps = shallow(<App {...props} />)
     it('should should have a control panel', () => {
       const controlPanel = appContainerWithProps.find(ControlPanel).render()
@@ -58,12 +58,10 @@ describe('#App', () => {
       expect(resultPanel).toHaveLength(1)
       expect(resultPanel.children()).toHaveLength(props.resultPanelValues.length)
     })
-    it('should should render a Table component', () => {
-      const table = appContainerWithProps.find(Table).render()
-      const tableBodyRows = table.find('tbody tr')
-      expect(table).toHaveLength(1)
-      expect(table.children()).toHaveLength(2)
-      expect(tableBodyRows).toHaveLength(props.phoneNumbers.length)
+    it('should should render a NumberGrid component', () => {
+      const numberGrid = appContainerWithProps.find(NumberGrid).render()
+      const numbers = numberGrid.find('.grid-item')
+      expect(numbers.children()).toHaveLength(props.phoneNumbers.length)
     })
   })
 })

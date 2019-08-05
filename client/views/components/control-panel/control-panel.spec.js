@@ -1,12 +1,12 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ControlPanel from './controlPanel'
+import ControlPanel from './control-panel.jsx'
 
 describe('#ControlPanel Component', () => {
   it('should render without props', () => {
     const component = shallow(<ControlPanel />)
     const componentProps = component.props()
-    expect(componentProps).toHaveProperty('className', 'control-panel')
+    expect(componentProps).toHaveProperty('className', 'container control-panel')
   })
 
   describe('with props', () => {

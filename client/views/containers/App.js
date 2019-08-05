@@ -1,10 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Table from '../components/table.jsx'
-import ControlPanel from '../components/controlPanel.jsx'
-import ResultPanel from '../components/resultPanel.jsx'
-import AppBar from '../components/appBar.jsx'
+import NumberGrid from '../components/number-grid/number-grid.jsx'
+import ControlPanel from '../components/control-panel/control-panel.jsx'
+import ResultPanel from '../components/result-panel/result-panel.jsx'
+import AppBar from '../components/app-bar/app-bar.jsx'
 
 class App extends Component {
   render() {
@@ -14,15 +14,15 @@ class App extends Component {
       generatePhoneNumbers
     } = this.props
     return (
-      <div id="root" className="container flex-container flex-column flex-center">
-        <h3>Random Phone Number Generator</h3>
+      <div className="container flex flex-column flex-center">
+        <h3 className="text-purple-dark">Random Phone Number Generator</h3>
         <AppBar
           totalPhoneNumbers={totalPhoneNumbers}
           generatePhoneNumbers={generatePhoneNumbers}
         />
         <ControlPanel actions={controlPanelActions} />
         <ResultPanel results={resultPanelValues} />
-        <Table
+        <NumberGrid
           tableData={phoneNumbers}
           tableHeaderColumns={['#', 'Phone Number']}
         />
