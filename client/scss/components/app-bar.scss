@@ -1,5 +1,6 @@
+@import "../base/variables";
+
 .app-bar {
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7,5 +8,10 @@
   margin: 1.2rem 0rem;
   h6 {
     font-size: 1.8rem;
+  }
+
+  button.solid {
+    background: $orange;
+    border-color: $orange;
   }
 }

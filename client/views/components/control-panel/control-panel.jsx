@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './button.jsx'
-import '../../scss/components/control-panel.scss'
+import Button from '../button/button.jsx'
+import '../../../scss/components/control-panel.scss'
 
 const ControlPanel = (props) => {
   const { actions } = props
   return (
-    <div className="control-panel">
+    <div className="container control-panel">
       {
         actions.map((action) => {
           const className = action.name.toLowerCase().replace(/ /gi, '-')
+          console.log('className: ', className)
           return (
             <Button
               key={action.name}
