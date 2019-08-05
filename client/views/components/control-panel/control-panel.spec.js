@@ -6,7 +6,7 @@ describe('#ControlPanel Component', () => {
   it('should render without props', () => {
     const component = shallow(<ControlPanel />)
     const componentProps = component.props()
-    expect(componentProps).toHaveProperty('className', 'control-panel')
+    expect(componentProps).toHaveProperty('className', 'container control-panel')
   })
 
   describe('with props', () => {

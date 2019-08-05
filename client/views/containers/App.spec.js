@@ -60,7 +60,7 @@ describe('#App', () => {
     })
     it('should should render a NumberGrid component', () => {
       const numberGrid = appContainerWithProps.find(NumberGrid).render()
-      const numbers = numberGrid.find('.numbers')
+      const numbers = numberGrid.find('.grid-item')
       expect(numbers.children()).toHaveLength(props.phoneNumbers.length)
     })
   })
