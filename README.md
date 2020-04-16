@@ -25,7 +25,7 @@ NodeJs, and Express.
 - In your terminal, change directory to the cloned folder and run `yarn install`. This installs all the app's dependencies.
 - Create a `.env` file using the sample specified in [.env.sample](.env.sample)
 - To start the app in production mode, set your `NODE_ENV` to `production` and run `yarn start`
-- To start the app in development mode, set your `NODE_ENV` to `development` and run `yarn run start:dev`
+- To start the app in development mode, set your `NODE_ENV` to `development` and run `yarn start:dev`
 - Point your browser to `localhost`, using the port defined in your `.env file`.
 - Alternatively, you can access the app on [rpn-generator.herokuapp.com/](https://rpn-generator.herokuapp.com/)
 
@@ -34,9 +34,9 @@ Server modules were tested using Mocha while client modules were tested using Je
 
 ###### NPM Scripts
 To make development easier, some NPM scripts were written:
-- `npm run test:client` runs tests for client modules using Jest
-- `npm run test:server` runs test for server modules using Mocha
-- `npm run start:dev` runs app on local machine
+- `yarn test:client` runs tests for client modules using Jest
+- `yarn test:server` runs test for server modules using Mocha
+- `yarn start:dev` runs app on local machine
 
 ***
 ##### License

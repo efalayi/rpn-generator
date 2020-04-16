@@ -10,7 +10,7 @@ import appPaths from '../config/paths'
 dotenv.config()
 
 const environment = process.env.NODE_ENV
-const API_PORT = process.env.PORT || 5000
+const API_PORT = process.env.API_PORT || 5000
 const allowedOrigins = process.env.ALLOWED_ORIGINS
 
 const contactsFilePath = `${appPaths.appData}/contacts.json`
@@ -29,6 +29,7 @@ const app = express()
 
 const corsOptions = {
   origin(origin, callback) {
+    console.log('origin: ', origin)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true)
     } else {

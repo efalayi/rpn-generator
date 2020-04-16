@@ -10,7 +10,6 @@ const ControlPanel = (props) => {
       {
         actions.map((action) => {
           const className = action.name.toLowerCase().replace(/ /gi, '-')
-          console.log('className: ', className)
           return (
             <Button
               key={action.name}
