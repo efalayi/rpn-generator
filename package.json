@@ -74,7 +74,7 @@
     "image-webpack-loader": "^4.5.0",
     "jest": "^23.6.0",
     "jest-junit": "^5.2.0",
-    "jsdom": "^13.1.0",
+    "jsdom": "^16.5.0",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.18.0",
     "mock-fs": "^4.7.0",
